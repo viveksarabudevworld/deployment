@@ -6,6 +6,6 @@ public class GetMessages{
 
 
     public String getGreeting()  {
-        return "Hi hello Jenkins";
+        System.out.println("Hi hello Jenkins");
     }
 }
