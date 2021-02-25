@@ -2,6 +2,16 @@ pipeline {
     agent any
 
     stages {
+            stage ('Build Stage') {
+
+                steps {
+                    withMaven(maven : 'maven_4_0_0') {
+                        sh 'mvn clean install'
+                    }
+                }
+            }
+
+    stages {
         stage ('Compile Stage') {
 
             steps {
@@ -10,7 +20,6 @@ pipeline {
                 }
             }
         }
-
 
         stage ('Deployment Stage') {
             steps {
