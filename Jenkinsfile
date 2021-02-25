@@ -11,15 +11,6 @@ pipeline {
             }
         }
 
-        stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'maven_4_0_0') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
 
         stage ('Deployment Stage') {
             steps {
